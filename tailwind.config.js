@@ -10,7 +10,7 @@ export default {
         poppins: ["Poppins", "sans-serif"]
       },
       gridTemplateColumns: {
-        20: "repeat(20, minmax(0, 1ft))",
+        20: "repeat(20, minmax(0, 1fr))",
       }
     },
   },
