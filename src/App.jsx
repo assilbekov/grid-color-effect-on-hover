@@ -1,22 +1,12 @@
 import { motion } from "framer-motion";
+import { Tile } from "./Tile";
 
 function App() {
   return (
     <main className="relative w-full">
       <section className="grid aspect-square h-screen w-full grid-cols-20 overflow-y-clip">
         {Array.from({ length: 20 * 12 }).map((_, i) => (
-          <motion.div
-            key={i}
-            whileHover={{
-              zIndex: 1,
-              backgroundColor: "#7c3aed",
-            }}
-            transition={{
-              duration: 5,
-              ease: "easeOut",
-            }}
-            className="aspect-square border-neutral-900 bg-neutral-950"
-          />
+          <Tile key={i} />
         ))}
       </section>
       <div className="pointer-events-none absolute inset-0 z-10 flex flex-col items-center justify-center gap-5 text-white">
