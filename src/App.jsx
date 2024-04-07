@@ -19,6 +19,15 @@ function App() {
           />
         ))}
       </section>
+      <div className="flex flex-col gap-5 absolute inset-0 justify-center items-center pointer-events-none text-white z-10">
+        <h1 className="text-9xl tracking-tight">Hello world!</h1>
+        <p className="text-xl text-center tracking-wide">
+          Hover over the squares to see the magic happen!
+        </p>
+        <button className="rounded-full text-3xl pointer-events-auto cursor-pointer bg-indigo-700 px-10 py-3">
+          Click me!
+        </button>
+      </div>
     </main>
   )
 }
