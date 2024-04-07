@@ -7,9 +7,15 @@ function App() {
         {Array.from({length: 20 * 12}).map((_, i) => (
           <motion.div 
             key={i} 
-            whileHover={{zIndex: 1, backgroundColor: "#4F46E5"}}
-            transition={{duration: 3, ease: "easeOut"}}
-            className="hover:bg-indigo-900 aspect-square bg-slate-800"
+            whileHover={{
+              zIndex: 1,
+              backgroundColor: "#7c3aed",
+            }}
+            transition={{
+              duration: 5,
+              ease: "easeOut",
+            }}
+            className="aspect-square bg-neutral-950 border-neutral-900"
           />
         ))}
       </section>
