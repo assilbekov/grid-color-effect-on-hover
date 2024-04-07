@@ -20,13 +20,31 @@ function App() {
         ))}
       </section>
       <div className="flex flex-col gap-5 absolute inset-0 justify-center items-center pointer-events-none text-white z-10">
-        <h1 className="text-9xl tracking-tight">Hello world!</h1>
-        <p className="text-xl text-center tracking-wide">
+        <motion.h1 
+          className="text-9xl tracking-tight"
+          initial={{opacity: 0, y: 100}}
+          animate={{opacity: 1, y: 0}}
+        >
+          Hello world!
+        </motion.h1>
+        <motion.p 
+          className="text-xl text-center tracking-wide"
+          initial={{opacity: 0, y: 100}}
+          animate={{opacity: 1, y: 0}}
+          transition={{delay: 0.25}}
+        >
           Hover over the squares to see the magic happen!
-        </p>
-        <button className="rounded-full text-3xl pointer-events-auto cursor-pointer bg-indigo-700 px-10 py-3">
+        </motion.p>
+        <motion.button 
+          className="rounded-full text-3xl pointer-events-auto cursor-pointer bg-indigo-700 px-10 py-3"
+          initial={{ scale: 0 }}
+          animate={{ scale: 1 }}
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.9 }}
+          transition={{ type:"spring", stiffness: 450, damping: 20 }}
+        >
           Click me!
-        </button>
+        </motion.button>
       </div>
     </main>
   )
